@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_143824) do
+ActiveRecord::Schema.define(version: 2021_09_07_151806) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2021_09_07_143824) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "camps_albums", force: :cascade do |t|
+    t.integer "camp_id"
+    t.integer "album_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id"], name: "index_camps_albums_on_album_id"
+    t.index ["camp_id"], name: "index_camps_albums_on_camp_id"
   end
 
   create_table "rappers", force: :cascade do |t|
