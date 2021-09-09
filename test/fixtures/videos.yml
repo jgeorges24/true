@@ -3,13 +3,13 @@
 one:
   name: MyString
   song: MyString
-  producer: MyString
+  director: MyString
   cover_art: MyString
   rapper_id: 1
 
 two:
   name: MyString
   song: MyString
-  producer: MyString
+  director: MyString
   cover_art: MyString
   rapper_id: 1

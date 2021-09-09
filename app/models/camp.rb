@@ -1,3 +1,3 @@
 class Camp < ApplicationRecord
-    has_and_belongs_to_many :albums
+    # has_and_belongs_to_many
 end

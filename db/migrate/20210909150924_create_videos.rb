@@ -1,9 +1,9 @@
-class CreateAlbums < ActiveRecord::Migration[6.1]
+class CreateVideos < ActiveRecord::Migration[6.1]
   def change
-    create_table :albums do |t|
+    create_table :videos do |t|
       t.string :name
       t.string :song
-      t.string :producer
+      t.string :director
       t.string :cover_art
       t.integer :rapper_id
 
