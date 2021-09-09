@@ -7,7 +7,36 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+#seeding filies below
 
-# z1 = Rapper.new("The migos")
-# z2 = 
-# z3 = 
+r1 = Rapper.create(name: "The migos")
+r2 = Rapper.create(name: "kanye")
+r3 = Rapper.create(name: "k charles")
+r4 = Rapper.create(name: "Prez P")
+
+v1 = Video.new(song: "bad and boojie")
+v1.name = r1
+v1.save
+v2 = Video.new(song: "dumb axx")
+v2.name = r2
+v2.save
+v3 = Video.new(song: "Midnight In Dallas")
+v3.name = r1
+v3.save
+v4 = Video.new(song: "OD")
+v4.name = r4
+v4.save
+
+camp1 = Camp.create(name: "Trap")
+camp2 = Camp.create(name: "Dreamer")
+camp3 = Camp.create(name: "crazy")
+
+camp1.videos << v1
+camp2.videos << v3
+camp2.videos << v4
+camp3.videos << v2
+
+
+
+
+
