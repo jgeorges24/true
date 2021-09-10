@@ -5,7 +5,7 @@ export const fetchVideos = () => {
         fetch("http://localhost:3001/videos")
         .then(resp => resp.json())
         .then(videos => {
-            dispatch({type: "ADDING_VIDEOS". videos})
+            dispatch({type:"ADDING_VIDEOS".videos})
         })
     }
 
