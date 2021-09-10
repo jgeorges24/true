@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux"
+import { fetchVideos } from "../actions/videos"
 
 export class Videos extends Component {
+    
+    componentDidMount(){
+
+        this.props.fetchVideos()
+
+    }
+    
+    
     render() {
         return (
             <div>
@@ -10,4 +20,4 @@ export class Videos extends Component {
     }
 }
 
-export default Videos
+export default connect(null, {fetchVideos} )(Videos)
