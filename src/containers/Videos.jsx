@@ -15,9 +15,18 @@ export class Videos extends Component {
         return (
             <div>
                 <h1> tracks container </h1>
+                {this.props.requesting ? <h1>Loading...</h1> : this.props.videos.map(video => <h3>{video.song} - {video.name}</h3>)}
             </div>
         )
     }
 }
 
-export default connect(null, {fetchVideos} )(Videos)
+const mapStateToProps = ({videosReducer}) => {
+    return {
+        videos: videosReducer.videos,
+        requesting: videosReducer.requesting
+    }
+
+}
+
+export default connect(mapStateToProps, {fetchVideos} )(Videos)

@@ -6,7 +6,7 @@ const Video = (props) => {
     
     return (
         <div>
-            
+            show page
         </div>
     )
 }

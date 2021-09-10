@@ -1,4 +1,4 @@
-const videosReducer = (state = {videos: [], requesting: false}, action) => {
+const videosReducer = (state = {videos: [], requesting: true}, action) => {
     switch (action.type) {
         case "START_FETCHING_VIDEOS":
             return {
