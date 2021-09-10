@@ -1,7 +1,7 @@
 export const fetchVideos = () => {
 
     return dispatch => {
-        debugger
+        dispatch({type: "START_FETCHING_VIDEOS"})
     }
 
 }
