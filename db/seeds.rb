@@ -15,16 +15,16 @@ r3 = Rapper.create(name: "k charles")
 r4 = Rapper.create(name: "Prez P")
 
 v1 = Video.new(song: "bad and boojie")
-v1.name = r1
+v1.rapper= r1
 v1.save
 v2 = Video.new(song: "dumb axx")
-v2.name = r2
+v2.rapper= r2
 v2.save
 v3 = Video.new(song: "Midnight In Dallas")
-v3.name = r1
+v3.rapper= r3
 v3.save
 v4 = Video.new(song: "OD")
-v4.name = r4
+v4.rapper= r4
 v4.save
 
 camp1 = Camp.create(name: "Trap")
