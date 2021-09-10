@@ -29,4 +29,4 @@ const mapStateToProps = ({videosReducer}) => {
 
 }
 
-export default connect(mapStateToProps, {fetchVideos} )(Videos)
+export default connect(mapStateToProps, { fetchVideos })(Videos)

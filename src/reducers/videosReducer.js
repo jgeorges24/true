@@ -20,3 +20,5 @@ const videosReducer = (state = {videos: [], requesting: true}, action) => {
     }
 }
 
+export default videosReducer
+
