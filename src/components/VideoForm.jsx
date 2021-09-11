@@ -1,11 +1,12 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import {connect} from "react-redux"
 import  {addVideo} from "../actions/videos"
 
 export class VideoForm extends Component {
-    
+    //controled input 
     state ={
-        videos: []
+        song: "",
+        name: ""
     }
     
     render() {
