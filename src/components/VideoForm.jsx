@@ -3,20 +3,34 @@ import {connect} from "react-redux"
 import  {addVideo} from "../actions/videos"
 
 export class VideoForm extends Component {
-    //controled input 
+    //controling input with the state 
     state ={
         song: "",
         name: ""
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.addVideo(this.state)
+        
+    }
+
+    handleChange = (e) => {
+
+        this.setState({
+            [e.target.name]: e.target.value            
+        })
+
     }
     
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <lable htmlFor="song">Song</lable>
+                    <lable htmlFor="song">Name of Song</lable>
                     <input onChange={this.handleChange} type="text" name="song" id="" value={this.state.song}/>
                     <br></br>
-                    <lable htmlFor="name">name of rapper</lable>
+                    <lable htmlFor="name">Name of Rapper</lable>
                     <input onChange={this.handleChange} type="text" name="name" id="" value={this.state.name}/>
                     <br></br>
                     <button>add music video</button>

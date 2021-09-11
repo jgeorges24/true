@@ -15,7 +15,7 @@ export class Videos extends Component {
         return (
             <div>
                 <h1> tracks container </h1>
-                {this.props.requesting ? <h1>Loading...that BAP BAP!!!</h1> : this.props.videos.map(video => <h3>{video.song} - {video.rapper.name}</h3>)}
+                {this.props.requesting ? <h1>Loading...that BAP BAP!!!</h1> : this.props.videos.map(video => <h3>-song {video.song} -rapper {video.rapper.name} -age {video.rapper.age}</h3>)}
             </div>
         )
     }
