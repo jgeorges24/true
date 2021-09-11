@@ -13,6 +13,13 @@ const videosReducer = (state = {videos: [], requesting: true}, action) => {
                 videos: [...action.videos]
             }
             break;
+        case "ADDING_VIDEO":
+            return {
+                ...state,
+                requesting: false,
+                videos: [...state.videos, action.video]
+            }
+            break;
     
         default:
             return state

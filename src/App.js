@@ -16,7 +16,7 @@ function App() {
         <NavBar />
           <Switch>
             <Route exact path="/home" render={(routerProps) => <Home {...routerProps} />}/>
-            <Route exact path="videos/new" render={(routerProps) => <VideoForm {...routerProps} />}/>
+            <Route exact path="/videos/new" render={(routerProps) => <VideoForm {...routerProps} />}/>
             <Route exact path="/videos" render={(routerProps) => <Videos {...routerProps} />}/>
           </Switch>
         </div>
