@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from "react-redux"
 import  {addVideo} from "../actions/videos"
 
-export class VideoForm extends Component {
+ class VideoForm extends Component{
     //controling input with the state 
     state ={
         song: "",
@@ -11,8 +11,12 @@ export class VideoForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addVideo(this.state)
-        
+       this.props.addVideo(this.state)
+       this.setState({
+           song: "",
+           name: ""
+       })
+
     }
 
     handleChange = (e) => {
@@ -25,7 +29,8 @@ export class VideoForm extends Component {
     
     render() {
         return (
-            <div>
+            <div className="container">
+            <h2>video form below</h2>
                 <form onSubmit={this.handleSubmit}>
                     <lable htmlFor="song">Name of Song</lable>
                     <input onChange={this.handleChange} type="text" name="song" id="" value={this.state.song}/>

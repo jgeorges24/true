@@ -1,12 +1,11 @@
 import React from 'react'
 
-const Video = (props) => {
-    
-    
+function Video({song, name}){
     
     return (
         <div>
-            show page
+            <h4>{song}</h4>
+            <p>{name}</p>
         </div>
     )
 }
