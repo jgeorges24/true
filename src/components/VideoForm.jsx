@@ -1,49 +1,58 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
-import  {addVideo} from "../actions/videos"
+import  { addVideo } from "../actions/videos"
 
- class VideoForm extends Component{
+
+ class VideoForm extends Component {
     //controling input with the state 
-    state ={
-        song: "",
-        name: ""
+    state={
+        videos: []
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
+        // debugger
        this.props.addVideo(this.state)
+    //    as a courtesy for the client
        this.setState({
-           song: "",
-           name: ""
+           name: "",
+           song: ""
        })
 
     }
 
     handleChange = (e) => {
-
-        this.setState({
-            [e.target.name]: e.target.value            
-        })
-
+        // debugger
+       const elName = e.target.name
+       const elValue = e.target.value
+        this.setState({[elName]: elValue})
     }
     
+
+    
+
     render() {
         return (
             <div className="container">
             <h2>video form below</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <lable htmlFor="song">Name of Song</lable>
-                    <input onChange={this.handleChange} type="text" name="song" id="" value={this.state.song}/>
+                    <lable htmlFor="name">Name of rapper</lable>
+                    <input onChange={this.handleChange} type="text" name="name" id="name" value={this.state.name}/>
                     <br></br>
-                    <lable htmlFor="name">Name of Rapper</lable>
-                    <input onChange={this.handleChange} type="text" name="name" id="" value={this.state.name}/>
+                    <lable htmlFor="song">Name of song</lable>
+                    <input onChange={this.handleChange} type="text" name="song" id="song" value={this.state.song}/>
+                    <br></br>
+                    {/* <lable htmlFor="rapper_name">Name of song</lable>
+                    <input onChange={this.handleChange} type="text" name="rapper_name" id="" value={this.state.video.rapper.name}/> */}
                     <br></br>
                     <button>add music video</button>
-                   
                 </form>
+
+
             </div>
         )
     }
 }
+
 
 export default connect(null, {addVideo})(VideoForm)

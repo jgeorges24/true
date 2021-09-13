@@ -12,8 +12,8 @@ export const fetchVideos = () => {
 }
 
 export const addVideo = () => {
-
     return dispatch => {
+        // debugger
         dispatch({type: "START_FETCHING_VIDEOS"})
         fetch("http://localhost:3001/videos")
         .then(resp => resp.json())
